@@ -1,2 +1,3 @@
-# Material Library
-Custom interface to save and load custom materials into shading networks across multiple DCCs
+# Project Library
+
+Library to store and load shot/asset material easily across multiple DCCs
