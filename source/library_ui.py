@@ -43,7 +43,7 @@ class project_ui(QWidget):
             self.material_info_box    = QGroupBox("Material Information")
             self.dcc_select           = QComboBox()
             self.engine_select        = QComboBox()
-            self.load_material        = QPushButton()
+            self.load_material        = QPushButton("Load Material")
             
             # widget settings
             self.search_bar.setFixedHeight(30)
@@ -78,6 +78,48 @@ class project_ui(QWidget):
                     background-color: rgb(30, 30, 30);   
                 }
                 """ )
+                
+            for sel_widg in [self.dcc_select, self.engine_select]:
+                sel_widg.setFixedHeight(30)
+                sel_widg.setStyleSheet ( """
+                QComboBox {
+                    border: 2px solid rgb(50, 50, 50);
+                    border-radius: 10px;
+                    background-color: rgb(40, 40, 40);
+                    color: rgb(150, 150, 150);
+                    font-family: Open Sans;
+                }
+                QComboBox::drop-down {
+                    border: 2px solid rgb(40, 40, 40);
+                    border-radius: 1px;
+                    background-color: rgb(50, 50, 50);
+                }
+                QComboBox::drop-down:hover {
+                    background-color: rgb(96, 157, 212); 
+                }
+                QComboBox::drop-down:pressed {
+                    background-color: rgb(30, 30, 30);
+                }
+                """ )
+            
+            self.load_material.setFixedHeight(40)
+            self.load_material.setStyleSheet ( """
+                QPushButton {
+                    border: 2px solid rgb(50, 50, 50);
+                    border-radius: 15px;
+                    background-color: rgb(40, 40, 40);
+                    color: rgb(150, 150, 150);
+                    font-family: Open Sans;
+                }
+                QPushButton:hover {
+                    background-color: rgb(96, 157, 212);   
+                    color: rgb(50, 50, 50)
+                }
+                QPushButton:pressed {
+                    background-color: rgb(30, 30, 30);   
+                }
+            """ )
+            
             
             # setting layouts
             drop_down_layout.addWidget(self.material_dropdown)
